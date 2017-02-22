@@ -1,0 +1,52 @@
+/* 
+    Created on : Nov 19, 2016, 11:46:40 AM
+    Author     : niklas
+*/
+
+/*
+    Den här css filen innehåller stiler för kontaktformuläret
+    som kan fyllas i och skickas till hemsidemailen. 
+*/
+
+/*Gör att sectionen tar upp hela widthen av sin parent*/
+section {
+    width:100%;
+    font-size: 1.2em;
+}
+
+form {
+    margin-left: 33%;
+    margin-right: 33%;
+}
+
+.label {
+    display:block;
+    margin-right: 3%;
+}
+.smallTxt {
+    font-size: .5em;
+}
+
+/*Stil för input fieldsen och textarean*/
+input[type^=text], input[type^=email], textarea {
+    padding: 4px 0;
+    margin-bottom: 10px;
+    display:block;
+    width: 100%;
+    font-size: 1.2em;
+    
+}
+.block {
+    display: block;
+}
+input[type^=submit], input[type^=reset] {
+    float:right;
+}
+textarea {
+    height: 100px;
+}
+/*class för att visa att ett input är fel*/
+.wrongInput {
+    border: solid thin red;
+}
+

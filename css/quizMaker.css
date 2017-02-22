@@ -1,0 +1,43 @@
+/* 
+    Created on : Nov 10, 2016, 3:38:52 PM
+    Author     : niklas
+*/
+
+/*Detta är reglerna för contentwrapper av quizMaker sidan*/
+
+#addQ {
+    float: right;
+    margin-right: 20%; 
+}
+#createQuiz {
+    float:right;
+}
+
+.label {
+    display: block;
+    font-size: 1.2em;
+}
+input[type^=text], textarea {
+    display:block;
+    font-size: 1.2em;
+    width: 100%;
+    margin-bottom: 1%;
+}
+input[name^=quizName] {
+    width: 20%;
+}
+input[name^=quizName], #lblQuizName {
+    margin-left: 10%;
+}
+
+section {
+    width:100%;
+}
+.questionBox {
+    width: 65%;
+    margin:0 auto;
+    background-color: #e6e6e6;
+    padding: 1% 2%;
+}
+
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Contact</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link type="text/css" rel="stylesheet" href="../css/mainStyle.css">
+        <link type="text/css" rel="stylesheet" href="../css/contact.css">
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+        </script>
+        <script type="text/javascript" src="../js/formChecker.js">
+        </script>
+        <script type="text/javascript" src="../js/userHandler.js">
+        </script>
+
+    </head>
+    <body>
+        <div id="mainWrapper">
+            <div id="headerMenu">
+                <header>
+                    <h1>QuizMe</h1>
+                </header>
+                <nav id="menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li id="quizMaker"><a href="quizMaker.html">Make Quiz</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li id="dropDown">
+                            <span id="user">Login</span>
+                            <div id="userDropDown" class="dropdown-menu">
+                                <span id="btnLogOut">Logout</span>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="contentWrapper">
+                <section>
+                    <header>
+                        <h3>Contact Form</h3>
+                    </header>
+                    <form>
+                        <span class="label">Name</span>
+                        <input type="text" name="name">
+                        <span class="label">Subject *</span>
+                        <input type="text" name="subject" class="required">
+                        <span class="label">E-mail *</span>
+                        <input type="email" name="email" class="required">
+                        <span class="label">Message *</span>
+                        <textarea name="message" class="required"></textarea>
+                        <span class="smallTxt block">Fields with mark <b>*</b> is required</span>
+                        <div>
+                            <input type="reset" value="reset">
+                            <input type="submit" name="submit">
+                        </div>
+                    </form>
+                </section>
+            </div>
+            <footer>
+                
+            </footer>
+        </div>
+    </body>
+</html>
+

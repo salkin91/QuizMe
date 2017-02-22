@@ -1,0 +1,289 @@
+/* 
+    Created on : Nov 7, 2016, 2:41:58 PM
+    Author     : niklas
+*/
+
+
+/*
+    Den här css-filen innehåller stilen för huvudsidan och generella strukturen
+    för menyn och layouten för hemsidan.
+*/
+
+/*Importerar egna fonts som används på hemsidan*/
+@font-face {
+    font-family: CinzelDecorative Regular;
+    src: url(../fonts/CinzelDecorative-Regular.otf);
+}
+@font-face {
+    font-family: Playfair Regular;
+    src: url(../fonts/PlayfairDisplay-Regular.otf);
+}
+
+#headerMenu {
+    font-family: CinzelDecorative Regular;
+}
+
+
+body{
+    margin-top: -25px; /*Gör att bodyn tar bort ett vitt mellanrum som fanns*/
+}
+/*Omsluter allt innehåll på hemsidan inuti bodyn och placerar den i mitten av skärmen*/
+#mainWrapper {
+    width: 980px;
+    margin: 0 auto;
+    background-color: #e6e6e6;
+}
+/*Omsluter innehållet som ska visas under menyn*/
+#contentWrapper {
+    font-family: Playfair Regular; /*Använder den impoterade fonten*/
+    width: 100%;
+    float:left;
+    background: rgba(252, 247, 247, 0.5);
+    min-height: 600px;
+}
+
+h1 {
+    padding-top: 20px; /*Kompenserar för uppflytningen av bodyn ovanför*/
+} 
+
+#menu {
+    width: 100%;
+}
+
+/*Skapar huvudmenyn remsan*/
+#menu ul, #quizes ul {
+    width: 100%;
+    list-style-type: none; /*tar bort list stil*/
+    margin: 0;
+    padding: 0;
+    background-color: #d9d9f2;
+    overflow: hidden;
+}
+/*gör att alla list items är float*/
+#menu ul li {
+    float: left;
+}
+/*Sätter stilen på alla länkarna som finns i #menu plus den med id user*/
+#menu ul li a, #user {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px; /*gör länken mer lik knappar*/
+    text-decoration: none;
+}
+/*Sätter en annan bakgrund på länken som hovras i #menu*/
+#menu ul li a:hover, #user:hover {
+    background-color: #cfcfcf;
+}
+/*Sätter länken med id quizMaker till none som default för att den inte finns
+    tillgänglig när man inte är inloggad*/
+#quizMaker {
+    display: none;
+}
+
+/*Följande för #quizes är stilen för menyn där man väljer vilket quiz man vill spela*/
+#quizes ul {
+    background-color: inherit;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin:0;
+}
+
+#quizes ul li {
+    width: 100%; /*gör att dom tar upp hela rader*/
+    background-color: aliceblue;
+    margin-bottom: 1.5%;
+    padding-left: 5%;
+}
+
+#quizes ul li:hover {
+    background-color: #cfcfcf;
+}
+/*Sätter samma stil oavsett om dom blivit besökta eller inte*/
+#quizes ul li a:visited, #quizes ul li a:link {
+    text-decoration: none;
+    color: black;
+}
+/*Placerar ut menyn i #contentwrapper*/
+#quizes {
+    float: left;
+    width: 15%;
+    border-right: solid thin;
+    border-bottom: solid thin;
+}
+
+section {
+    position: relative;
+    float:left;
+    width: 83.2%;
+}
+header {
+    text-align: center;
+}
+#quizContainer {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+/*Container för varje fråga i quizen*/
+.quizBox {
+    width:100%;
+    background-color: #d9d9f2;
+    display: block;
+    border: solid;
+    border-radius: 10px;
+    margin-bottom: 1.5%;
+}
+/*Stil för listan i .quizbox*/
+.quizBox ul {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+/*Stil för list item som finns i .quizBox*/
+.quizBox ul li {
+    width: 100%;
+    border-top:solid thin;
+    border-bottom:solid thin;
+    margin-bottom: 1.5%;
+    background-color: aliceblue;
+    padding: 1px 0px;
+}
+
+.quizBox p {
+    text-align: center;
+}
+
+.quizBox ul li p{
+    text-align: left;
+    padding-left: 2%;
+}
+/*class för vilken fråga man är på i quizet*/
+.questionNr {
+    font-size: 1.5em;
+    float: Right;
+    margin-right: 1%;
+}
+
+/*Stil för login och skapa konto fönster*/
+#login, #createAccount {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    background-color: #e6e6e6;
+    width:40%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/*Följande regler sätter stilen för login och skapa konto formulären
+--------------------------------------------------------------------*/
+
+/*Sätter alla element inuti login och skapa konto formulären*/
+#loginForm, #loginForm span, #loginForm input,
+    #accountForm, #accountForm span, #accountForm input{
+    display: block;
+}
+
+#loginForm input[type^=text], #loginForm input[type^=password], #loginForm .label,
+    #accountForm input[type^=text], #accountForm input[type^=password], #accountForm .label{
+    width: 93%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+form #cancelLogin, form input[type^=submit], form #cancelAccount {
+    display: inline;
+    float: right;
+}
+/*Id för knappen att komma till skapa konto fönstret*/
+#btnCreate {
+    float: left;
+}
+
+form h4{
+    text-align: center;
+}
+/*-----------------------------------------------------*/
+
+/*Stilen för en span*/
+#quizCreaterName {
+    font-size: 0.5em;
+}
+
+/*En popupbox som är skapad för att visa resultatet från ett färdigspelat quiz*/
+#popUpBox {
+    display: none;
+    position: absolute; /*Så den kan placeras över alla element på sidan*/
+    width: 150px; 
+    height: 100px;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    background: #cfcfcf;
+    top: 50%; /*så den blir placerad nära mitten i Y-axel*/
+    left: 50%; /*så den blir placerad nära mitten i X-axel*/
+    margin-top: -50px; /*fixar till att den hamnar exakt i mitten i Y-axel*/
+    margin-left: -75px;/*fixar till att den hamnar exakt i mitten i X-axel*/
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+/*Knapp som stänger popUpBox som placeras inuti den*/
+#closeButton {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 30%;
+}
+
+/*Stil för en span som placeras ut*/
+#playedQuiz {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/*tooltip class*/
+.tp {
+    position: absolute; /*Så den kan placeras vart som helst på skärmen*/
+    padding: 2px 5px; /*Få mer utrymme runt texten*/
+    display: none; /*Så den är gömd om den inte används*/
+    background: black; 
+    color: white;
+    border: solid thin;
+    border-radius: 7px;
+    font-size: 14px;
+}
+/*stil för #dropdown som gör att allt innehåll */
+#dropdown {
+    display: inline-block;
+    float: left;
+}
+
+#dropdown:hover {
+    cursor: pointer;
+}
+
+/*Dropdown element som innehåller länkar*/
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+#user:hover, .dropdown-menu span:hover {
+    cursor: pointer;
+}
+/*Länkarna inne i dropdown är block så de hamnar på varandra*/
+.dropdown-menu span {
+    padding: 12px 16px; /*Gör de mer lika knappar*/
+    text-decoration: none; /*tar bort underscore*/
+    display: block;
+    text-align: left;
+    border-bottom: groove thin; /*skiljer elementen ifrån varandra*/
+}
+/*tar bort border så att det inte blir dubbel med förälderns border*/
+.dropdown-menu a:last-child {
+    border: none;
+}

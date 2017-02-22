@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Make a quiz</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="../css/mainStyle.css">
+        <link rel="stylesheet" type="text/css" href="../css/quizMaker.css">
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+        </script>
+        <script type="text/javascript" src="../js/quizMaker.js">
+        </script>
+        <script type="text/javascript" src="../js/userHandler.js">
+        </script>
+    </head>
+    <body>
+        <div id="mainWrapper">
+            <div id="headerMenu">
+                <header>
+                    <h1>QuizMe</h1>
+                </header>
+                <nav id="menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="quizMaker.html">Make Quiz</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li id="dropDown">
+                            <span id="user">Login</span>
+                            <div id="userDropDown" class="dropdown-menu">
+                                <span id="btnLogOut">Logout</span>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="contentWrapper">
+                
+                <section>
+                    <header>
+                        <h2>Make a Quiz</h2>
+                        
+                    </header>
+                    <form>
+                        <span id="lblQuizName" class="label">Quiz Name</span>
+                        <input type="text" name="quizName">
+                        <div id="questionContainer">
+                            <div class="questionBox">
+                                <span class="label">Question 1</span>
+                                <textarea class="input" name="question[1]"></textarea>
+                                <span class="label">Correct Answer</span>
+                                <input class="input" type="text" name="correctAnswer[1]">
+                                <span class="label">Wrong Answer</span>
+                                <input class="input" type="text" name="answer1[1]">
+                                <span class="label">Wrong Answer</span>
+                                <input class="input" type="text" name="answer2[1]">
+                                <span class="label">Wrong Answer</span>
+                                <input class="input" type="text" name="answer3[1]">
+                            </div>
+                        </div>
+                        <button id="addQ">Add Question</button>
+                        <button id="createQuiz">Create Quiz</button>
+                    </form>
+                </section>
+            </div>
+            <footer>
+                
+            </footer>
+        </div>
+    </body>
+</html>

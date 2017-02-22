@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link type="text/css" rel="stylesheet" href="../css/mainStyle.css">
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+        </script>
+        <script type="text/javascript" src="../js/mainPage.js">
+        </script>
+        <script type="text/javascript" src="../js/userHandler.js">
+        </script>
+        <script type="text/javascript" src="../js/toolTip.js">
+        </script>
+        <script type="text/javascript" src="../js/playedQuiz.js">
+        </script>
+        
+    </head>
+    <body>
+        <div id="mainWrapper">
+            <div id="headerMenu">
+                <header>
+                    <h1>QuizMe</h1>
+                </header>
+                <nav id="menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li id="quizMaker"><a href="quizMaker.html">Make Quiz</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li id="dropDown">
+                            <span id="user">Login</span>
+                            <div id="userDropDown" class="dropdown-menu">
+                                <span id="btnLogOut">Logout</span>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="contentWrapper">
+                <nav id="quizes" class="toolTip" title="Press a name to get the quiz">
+                    <header>
+                        <h4>Quizes</h4>
+                    </header>
+                    <ul id="quizList">
+                    </ul>
+                </nav>
+                <section>
+                    <header>
+                        <h2>Quiz yourself</h2>
+                        <p>Select a quiz in the list to the left</p>
+                    </header>
+                    
+                    <div id="login">
+                        <form id="loginForm">
+                            <h4>Login</h4>
+                            <span class="label">Username</span>
+                            <input type="text" name="user">
+                            <span class="label">Password</span>
+                            <input id="loginPassword" type="password" name="password">
+                            <button id="btnCreate">Create Account</button>
+                            <button id="cancelLogin">Cancel</button>
+                            <input type="submit" name="submit">
+                        </form>
+                    </div>
+                    <div id="createAccount">
+                        <form id="accountForm">
+                            <h4>Account</h4>
+                            <span class="label">Username</span>
+                            <input type="text" name="user">
+                            <span class="label">Password</span>
+                            <input id="createPassword" type="password" name="password">
+                            <button id="cancelAccount">Cancel</button>
+                            <input type="submit" name="submit">
+                        </form>
+                    </div>
+                    
+                    <span id="playedQuiz"></span>
+                    <div id="popUpBox">
+                        <button id="closeButton">OK</button>
+                    </div>
+                    <div id="quizContainer">
+                        <h3 id="quizName"></h3>
+                        <span id="quizCreaterName"></span>
+                        <div class="quizBox"></div>
+                    </div>
+                </section>
+            </div>
+            <footer>
+                
+            </footer>
+        </div>
+    </body>
+</html>
